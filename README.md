@@ -47,7 +47,6 @@ forward_sync(listener)
 
 ## API
 
-````markdown
 ## Environment Variables
 
 Outray supports configuration via environment variables. These are optional but recommended.
