@@ -43,6 +43,29 @@ listener = http("http://localhost:8080")
 forward_sync(listener)
 ```
 
+- Multiple tunnels
+```python
+import asyncio
+from outray import forward, tcp, udp, http
+
+
+async def main():
+
+    listners = [
+        http("http://localhost:8080", "small-arm"),
+        http("http://localhost:8080", "small-leg"),
+        udp("localhost", 8001, remote_port=30711),
+        udp("localhost", 8001, remote_port=30710),
+        tcp("localhost", 2002, remote_port=20711),
+        tcp("localhost", 2002, remote_port=20710),
+    ]
+
+    await asyncio.gather(*[forward(l) for l in listners])
+
+
+asyncio.run(main())
+```
+
 ---
 
 ## API
