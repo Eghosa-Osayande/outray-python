@@ -47,11 +47,11 @@ forward_sync(listener)
 
 ## API
 
-## Environment Variables
+### Environment Variables
 
 Outray supports configuration via environment variables. These are optional but recommended.
 
-### `OUTRAY_API_KEY`
+#### `OUTRAY_API_KEY`
 
 Your API key used to authenticate tunnel connections.
 
@@ -70,7 +70,7 @@ await forward(l1, api_key="API_KEY")
 
 ---
 
-### `OUTRAY_API_URI`
+#### `OUTRAY_API_URI`
 
 The WebSocket endpoint used to establish tunnels.
 
