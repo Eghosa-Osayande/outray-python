@@ -1,0 +1,29 @@
+[project]
+name = "outray"
+version = "0.0.3"
+authors = [
+  { name="Eghosa Osayande", email="osayandeeghosam@gmail.com" },
+]
+description = "Python SDK for outray.dev tunneling service"
+readme = "README.md"
+requires-python = ">=3.10"
+classifiers = [
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+]
+license = "MIT"
+license-files = ["LICEN[CS]E*"]
+
+dependencies = [
+  'dotenv',
+  'websockets'
+]
+
+[project.urls]
+Homepage = "https://github.com/Eghosa-Osayande/outray-python"
+Issues = "https://github.com/Eghosa-Osayande/outray-python/issues"
+
+[build-system]
+requires = ["hatchling >= 1.26"]
+build-backend = "hatchling.build"
